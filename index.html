@@ -14,7 +14,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #f7b9d7 0%, #87ceeb 100%);
             color: #333;
             line-height: 1.6;
         }
@@ -27,7 +27,7 @@
         
         .header {
             text-align: center;
-            background: white;
+            background: #f8f9fa;
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -38,7 +38,7 @@
             color: #2c3e50;
             font-size: 2.5rem;
             margin-bottom: 10px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #f7b9d7, #87ceeb);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -57,7 +57,7 @@
         }
         
         .stat-card {
-            background: white;
+            background: #f8f9fa;
             padding: 25px;
             border-radius: 15px;
             text-align: center;
@@ -73,7 +73,7 @@
         .stat-card .number {
             font-size: 2.5rem;
             font-weight: bold;
-            color: #667eea;
+            color: #d6336c;
             margin-bottom: 5px;
         }
         
@@ -92,7 +92,7 @@
         }
         
         .chart-container {
-            background: white;
+            background: #f8f9fa;
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
@@ -111,7 +111,7 @@
         }
         
         .top-days-container {
-            background: white;
+            background: #f8f9fa;
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
@@ -126,7 +126,7 @@
         }
         
         .day-item {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #f7b9d7, #87ceeb);
             color: white;
             padding: 15px;
             border-radius: 10px;
@@ -146,7 +146,7 @@
         
         .footer {
             text-align: center;
-            background: white;
+            background: #f8f9fa;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
@@ -165,7 +165,7 @@
             width: 16px;
             height: 16px;
             margin-left: 8px;
-            background: #667eea;
+            background: #f7b9d7;
             border-radius: 50%;
             color: white;
             font-size: 12px;
@@ -231,7 +231,7 @@
         }
         
         .tab.active {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #f7b9d7, #87ceeb);
             color: white;
         }
         
@@ -255,7 +255,7 @@
             padding: 8px 12px;
             background: #f8f9fa;
             border-radius: 6px;
-            border-left: 3px solid #667eea;
+            border-left: 3px solid #f7b9d7;
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
@@ -305,7 +305,7 @@
         }
         
         .nickname-item {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #f7b9d7, #87ceeb);
             color: white;
             padding: 15px;
             border-radius: 10px;
@@ -581,17 +581,19 @@
                     <canvas id="responseChart"></canvas>
                 </div>
             </div>
-            
-            <div class="chart-container">
-                <h3 class="tooltip">🕐 Saatlik Mesaj Dağılımı
-                    <span class="info-icon">i</span>
-                    <span class="tooltiptext">Günün hangi saatlerinde daha çok mesajlaştığımız (00:00-01:00 formatında)</span>
-                </h3>
-                <div class="chart-wrapper">
-                    <canvas id="hourlyChart"></canvas>
-                </div>
+        </div>
+
+        <div class="chart-container">
+            <h3 class="tooltip">🕐 Saatlik Mesaj Dağılımı
+                <span class="info-icon">i</span>
+                <span class="tooltiptext">Günün hangi saatlerinde daha çok mesajlaştığımız (00:00-01:00 formatında)</span>
+            </h3>
+            <div class="chart-wrapper">
+                <canvas id="hourlyChart"></canvas>
             </div>
         </div>
+
+        <div style="margin-top: 40px;"></div>
 
         <div class="top-days-container">
             <h3 class="tooltip">🏆 En Çok Konuştuğumuz 10 Gün
@@ -609,6 +611,8 @@
             <div class="word-list" id="words-list"></div>
         </div>
 
+        <div style="margin-top: 40px;"></div>
+
         <div class="top-days-container">
             <h3 class="tooltip">💕 Sevgi Sözcükleri
                 <span class="info-icon">i</span>
@@ -622,7 +626,9 @@
 
     <script>
         // Embedded JSON data
-        const data = {
+        // Embedded JSON data
+        const data = 
+{
   "totalMessages": 161609,
   "totalDays": 335,
   "messagesPerDay": 482.41492537313434,
@@ -676,20 +682,20 @@
     "7": 111,
     "8": 303,
     "9": 679,
-    "10": 1463,
-    "11": 2705,
-    "12": 4508,
-    "13": 6139,
-    "14": 7243,
-    "15": 8090,
-    "16": 8576,
-    "17": 8894,
-    "18": 9506,
-    "19": 10953,
-    "20": 13080,
-    "21": 14851,
-    "22": 16139,
-    "23": 25339
+    "10": 2056,
+    "11": 4014,
+    "12": 5210,
+    "13": 6321,
+    "14": 5338,
+    "15": 4851,
+    "16": 3784,
+    "17": 3480,
+    "18": 3970,
+    "19": 3690,
+    "20": 4605,
+    "21": 8023,
+    "22": 16140,
+    "23": 25340
   },
   "topMessagingDays": [
     {
@@ -790,10 +796,6 @@
         "count": 9174
       },
       {
-        "word": "ceyda",
-        "count": 7373
-      },
-      {
         "word": "bir",
         "count": 4213
       },
@@ -856,6 +858,10 @@
       {
         "word": "sevgilim",
         "count": 2310
+      },
+      {
+        "word": "yani",
+        "count": 2153
       }
     ],
     "bySender": {
@@ -867,10 +873,6 @@
         {
           "word": "çok",
           "count": 4495
-        },
-        {
-          "word": "ceyda",
-          "count": 4046
         },
         {
           "word": "ben",
@@ -939,6 +941,10 @@
         {
           "word": "sevgilim",
           "count": 1260
+        },
+        {
+          "word": "benim",
+          "count": 1191
         }
       ],
       "ceyda! 🧿": [
@@ -953,10 +959,6 @@
         {
           "word": "ben",
           "count": 5276
-        },
-        {
-          "word": "ceyda",
-          "count": 3327
         },
         {
           "word": "ama",
@@ -1021,6 +1023,10 @@
         {
           "word": "şey",
           "count": 1204
+        },
+        {
+          "word": "seviyorum",
+          "count": 1172
         }
       ]
     }
@@ -1062,16 +1068,16 @@
       "nickname": "hayatım",
       "count": 428,
       "bySender": {
-        "yk7": 171,
-        "ceyda! 🧿": 257
+        "yk7": 163,
+        "ceyda! 🧿": 265
       }
     },
     {
       "nickname": "beneğim",
       "count": 102,
       "bySender": {
-        "yk7": 102,
-        "ceyda! 🧿": 0
+        "yk7": 99,
+        "ceyda! 🧿": 3
       }
     }
   ],
@@ -1079,8 +1085,8 @@
     "start": "20.10.2024",
     "end": "20.09.2025"
   }
-};
-
+}
+;
         // Sayıları formatla
         function formatNumber(num, decimals = 0) {
             if (decimals > 0) {
@@ -1097,6 +1103,21 @@
         function getWordTooltip(word) {
             const yk7Count = data.mostUsedWords.bySender.yk7.find(w => w.word === word)?.count || 0;
             const ceydaCount = data.mostUsedWords.bySender['ceyda! 🧿'].find(w => w.word === word)?.count || 0;
+            
+            // Eğer toplam sayı eşleşmiyorsa, eksik olan kısmı diğer kişiye ekle
+            const totalOverall = data.mostUsedWords.overall.find(w => w.word === word)?.count || 0;
+            const totalCalculated = yk7Count + ceydaCount;
+            
+            if (totalCalculated < totalOverall) {
+                if (yk7Count === 0) {
+                    const adjustedYk7 = totalOverall - ceydaCount;
+                    return `YK7: ${formatNumber(adjustedYk7)} | Ceydoşkuş: ${formatNumber(ceydaCount)}`;
+                } else if (ceydaCount === 0) {
+                    const adjustedCeyda = totalOverall - yk7Count;
+                    return `YK7: ${formatNumber(yk7Count)} | Ceydoşkuş: ${formatNumber(adjustedCeyda)}`;
+                }
+            }
+            
             return `YK7: ${formatNumber(yk7Count)} | Ceydoşkuş: ${formatNumber(ceydaCount)}`;
         }
         
@@ -1124,7 +1145,7 @@
                     labels: ['YK7', 'Ceydoşkuş'],
                     datasets: [{
                         data: [data.messageBySender.yk7, data.messageBySender['ceyda! 🧿']],
-                        backgroundColor: ['#667eea', '#764ba2'],
+                        backgroundColor: ['#87ceeb', '#f7b9d7'],
                         borderWidth: 0,
                         hoverOffset: 15
                     }]
@@ -1156,8 +1177,8 @@
                     datasets: [{
                         label: 'Mesaj Sayısı',
                         data: weeklyData,
-                        backgroundColor: 'rgba(102, 126, 234, 0.8)',
-                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(135, 206, 235, 0.8)',
+                        borderColor: '#f7b9d7',
                         borderWidth: 2,
                         borderRadius: 8
                     }]
@@ -1189,7 +1210,7 @@
                     datasets: [{
                         label: 'Ortalama Ardışık Mesaj',
                         data: [data.consecutiveMessages.bySender.yk7, data.consecutiveMessages.bySender['ceyda! 🧿']],
-                        backgroundColor: ['#667eea', '#764ba2'],
+                        backgroundColor: ['#87ceeb', '#f7b9d7'],
                         borderRadius: 8
                     }]
                 },
@@ -1223,7 +1244,7 @@
                             data.responseTime.bySender.yk7.average, 
                             data.responseTime.bySender['ceyda! 🧿'].average
                         ],
-                        backgroundColor: ['#667eea', '#764ba2'],
+                        backgroundColor: ['#87ceeb', '#f7b9d7'],
                         borderRadius: 8
                     }]
                 },
@@ -1262,8 +1283,8 @@
                     datasets: [{
                         label: 'Mesaj Sayısı',
                         data: hourlyData,
-                        backgroundColor: 'rgba(102, 126, 234, 0.8)',
-                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(135, 206, 235, 0.8)',
+                        borderColor: '#f7b9d7',
                         borderWidth: 2,
                         borderRadius: 4
                     }]
